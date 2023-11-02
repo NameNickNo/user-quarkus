@@ -1,11 +1,11 @@
-package org.acme.service;
+package com.project.user.service;
 
+import com.project.user.exception.UserNotFoundException;
+import com.project.user.model.User;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import jakarta.transaction.Transactional;
-import org.acme.exception.UserNotFoundException;
-import org.acme.model.User;
-import org.acme.repository.UserRepository;
+import com.project.user.repository.UserRepository;
 import org.eclipse.microprofile.config.inject.ConfigProperty;
 
 import java.util.List;

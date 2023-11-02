@@ -1,6 +1,6 @@
-package org.acme.util;
+package com.project.user.util;
 
-import org.acme.model.User;
+import com.project.user.model.User;
 
 public interface UserValidator {
 

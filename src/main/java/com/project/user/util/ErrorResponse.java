@@ -1,4 +1,4 @@
-package org.acme.util;
+package com.project.user.util;
 
 import jakarta.ws.rs.core.Response;
 

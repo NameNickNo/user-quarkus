@@ -1,10 +1,10 @@
-package org.acme.exception.handler;
+package com.project.user.exception.handler;
 
+import com.project.user.exception.UserNotFoundException;
+import com.project.user.util.ErrorResponse;
 import jakarta.ws.rs.core.Response;
 import jakarta.ws.rs.ext.ExceptionMapper;
 import jakarta.ws.rs.ext.Provider;
-import org.acme.exception.UserNotFoundException;
-import org.acme.util.ErrorResponse;
 
 @Provider
 public class UserNotFoundExceptionHandler implements ExceptionMapper<UserNotFoundException> {

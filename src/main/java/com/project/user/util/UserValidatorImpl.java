@@ -1,13 +1,13 @@
-package org.acme.util;
+package com.project.user.util;
 
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.Validator;
-import org.acme.exception.UserEmailNotUniqueException;
-import org.acme.exception.UserNotCreateException;
-import org.acme.model.User;
-import org.acme.service.UserService;
+import com.project.user.exception.UserEmailNotUniqueException;
+import com.project.user.exception.UserNotCreateException;
+import com.project.user.model.User;
+import com.project.user.service.UserService;
 import org.eclipse.microprofile.config.inject.ConfigProperty;
 
 import java.util.Set;

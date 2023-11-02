@@ -1,4 +1,4 @@
-package org.acme.exception;
+package com.project.user.exception;
 
 public class UserBadRequestException extends RuntimeException{
 

@@ -1,10 +1,10 @@
-package org.acme.exception.handler;
+package com.project.user.exception.handler;
 
 import jakarta.ws.rs.core.Response;
 import jakarta.ws.rs.ext.ExceptionMapper;
 import jakarta.ws.rs.ext.Provider;
-import org.acme.exception.UserBadRequestException;
-import org.acme.util.ErrorResponse;
+import com.project.user.exception.UserBadRequestException;
+import com.project.user.util.ErrorResponse;
 
 @Provider
 public class UserBadRequestExceptionHandler implements ExceptionMapper<UserBadRequestException> {

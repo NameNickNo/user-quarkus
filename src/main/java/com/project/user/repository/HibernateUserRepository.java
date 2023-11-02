@@ -1,11 +1,11 @@
-package org.acme.repository;
+package com.project.user.repository;
 
+import com.project.user.model.User;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.Query;
 import jakarta.transaction.Transactional;
-import org.acme.model.User;
 
 import java.util.List;
 import java.util.Optional;

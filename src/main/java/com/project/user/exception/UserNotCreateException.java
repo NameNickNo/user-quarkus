@@ -1,4 +1,4 @@
-package org.acme.exception;
+package com.project.user.exception;
 
 public class UserNotCreateException extends UserBadRequestException{
     public UserNotCreateException(String message) {

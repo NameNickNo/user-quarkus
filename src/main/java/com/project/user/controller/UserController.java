@@ -1,15 +1,15 @@
-package org.acme.controller;
+package com.project.user.controller;
 
+import com.project.user.dto.UserCreateDTO;
+import com.project.user.dto.UserDTO;
+import com.project.user.exception.UserNotFoundException;
+import com.project.user.model.User;
+import com.project.user.service.UserService;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
-import org.acme.dto.UserCreateDTO;
-import org.acme.dto.UserDTO;
-import org.acme.exception.UserNotFoundException;
-import org.acme.model.User;
-import org.acme.service.UserService;
-import org.acme.util.UserValidator;
+import com.project.user.util.UserValidator;
 import org.eclipse.microprofile.config.inject.ConfigProperty;
 
 import java.util.List;
