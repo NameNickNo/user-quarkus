@@ -5,6 +5,7 @@ import com.project.user.dto.UserDTO;
 import com.project.user.exception.UserNotFoundException;
 import com.project.user.model.User;
 import com.project.user.service.UserService;
+import com.project.user.util.CustomResponse;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
@@ -55,7 +56,7 @@ public class UserController {
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/update")
     public Response updateUser(UserDTO userDTO) {
-        User user = new User(userDTO.getName(), userDTO.getEmail(), userDTO.getPassword());
+        User user = new User(userDTO.getId(), userDTO.getName(), userDTO.getEmail(), userDTO.getPassword());
 
         userValidator.validate(user);
         userService.update(userDTO.getId(), user);
@@ -68,7 +69,7 @@ public class UserController {
     @Path("/delete/{id}")
     public Response deleteUser(@PathParam("id") long id) {
         userService.remove(id);
-        return Response.ok().entity(String.format(userDeleted, id)).build();
+        return Response.ok().entity(new CustomResponse(Response.Status.OK, String.format(userDeleted, id))).build();
     }
 
     @GET

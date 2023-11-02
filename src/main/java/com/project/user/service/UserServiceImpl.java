@@ -14,7 +14,6 @@ import java.util.Optional;
 @ApplicationScoped
 public class UserServiceImpl implements UserService {
 
-
     @ConfigProperty(name = "user.error.msg.usernotfound")
     String userNotFound;
 
@@ -46,8 +45,6 @@ public class UserServiceImpl implements UserService {
         userToUpdate.setName(updatedUser.getName());
         userToUpdate.setEmail(updatedUser.getEmail());
         userToUpdate.setPassword(updatedUser.getPassword());
-
-        userRepository.save(userToUpdate);
     }
 
     public Optional<User> findByEmail(String email) {

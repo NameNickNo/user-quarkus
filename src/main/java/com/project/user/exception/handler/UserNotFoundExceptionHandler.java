@@ -1,7 +1,7 @@
 package com.project.user.exception.handler;
 
 import com.project.user.exception.UserNotFoundException;
-import com.project.user.util.ErrorResponse;
+import com.project.user.util.CustomResponse;
 import jakarta.ws.rs.core.Response;
 import jakarta.ws.rs.ext.ExceptionMapper;
 import jakarta.ws.rs.ext.Provider;
@@ -11,6 +11,6 @@ public class UserNotFoundExceptionHandler implements ExceptionMapper<UserNotFoun
 
     @Override
     public Response toResponse(UserNotFoundException exception) {
-        return Response.status(404).entity(new ErrorResponse(Response.Status.NOT_FOUND, exception.getMessage())).build();
+        return Response.status(404).entity(new CustomResponse(Response.Status.NOT_FOUND, exception.getMessage())).build();
     }
 }

@@ -38,7 +38,9 @@ public class UserValidatorImpl implements UserValidator{
     }
 
     private void checkEmailUniqueness(User user) {
-        if (userService.findByEmail(user.getEmail()).isPresent())
+        User userWithIdenticalEmail = userService.findByEmail(user.getEmail()).orElse(null);
+        if (userWithIdenticalEmail != null && userWithIdenticalEmail.getId() != user.getId()) {
             throw new UserEmailNotUniqueException(emailNotUnique);
+        }
     }
 }
