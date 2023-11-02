@@ -34,6 +34,10 @@ public class UserValidatorImpl implements UserValidator{
             throw new UserNotCreateException(collect);
         }
 
+        checkEmailUniqueness(user);
+    }
+
+    private void checkEmailUniqueness(User user) {
         if (userService.findByEmail(user.getEmail()).isPresent())
             throw new UserEmailNotUniqueException(emailNotUnique);
     }
